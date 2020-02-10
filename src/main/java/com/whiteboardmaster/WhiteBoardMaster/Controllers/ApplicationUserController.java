@@ -27,6 +27,7 @@ public class ApplicationUserController {
     @Autowired
     ApplicationUserRepository userRepository;
 
+    // boardRepository is being used. should be removed.
     @Autowired
     BoardRepository boardRepository;
 
@@ -73,6 +74,8 @@ public class ApplicationUserController {
         return new RedirectView("/");
     }
 
+
+    // reviewer gave a comment that this is a good helper function
     private void addUserNameToPage(Principal p, Model m) {
         if (p != null) {
             m.addAttribute("username", p.getName());

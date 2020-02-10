@@ -43,6 +43,8 @@ public class ApplicationUser implements UserDetails {
     /*
                                 GETTERS
     */
+
+    // getId() is not being used. it should be removed
     public long getId() {
         return id;
     }
@@ -65,7 +67,8 @@ public class ApplicationUser implements UserDetails {
     /*
                                 SETTERS
     */
-
+    // setFirstName() is not being used. it should be removed
+    // setLastName() is not being used. it should be removed
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -78,7 +81,7 @@ public class ApplicationUser implements UserDetails {
     /*
                                 MUTATORS
     */
-
+    // adding the description will be helpful
     public void addBoard(Board board){
         boards.add(board);
     }

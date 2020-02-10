@@ -11,9 +11,11 @@ import java.security.Principal;
 @Controller
 public class HomeController {
 
+    // userRepository is not being used. should be removed
     @Autowired
     ApplicationUserRepository userRepository;
 
+    // boardRepository is not being used. should be removed
     @Autowired
     BoardRepository boardRepository;
 

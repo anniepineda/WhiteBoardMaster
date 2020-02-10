@@ -48,6 +48,8 @@ public class BoardController {
     /*
                     POST ROUTES
     */
+
+    // it would be better if it was defined a line before
     Board board;
 
 
@@ -72,11 +74,13 @@ public class BoardController {
         return "result";
     }
 
+    // response is passed not being used
     @PostMapping("/updateAndSaveBoard")
     public RedirectView updateBoard(Principal p, Model m, long id, String problemDomain, String algorithm, String pseudoCode, String bigOTimeNotation, String bigOSpaceNotation, String verification, String code, String edgeCases, String inputAndOutput, String visual, String title, HttpServletResponse response) {
 
         Board boardToUpdate = boardRepository.getOne(id);
 
+        // boardToUpdate looks redundancy, it would look good if it was passed by a object
         boardToUpdate.setProblemDomain(problemDomain);
         boardToUpdate.setAlgorithm(algorithm);
         boardToUpdate.setPseudoCode(pseudoCode);
@@ -119,6 +123,7 @@ public class BoardController {
     /*
                     GET ROUTES
     */
+    // the name convention can be better here. board to boards
     @GetMapping("/board/{id}")
     public String getBoardFromUserProfile(@PathVariable long id, Principal p, Model m, HttpServletResponse response) throws IOException {
 
@@ -141,6 +146,7 @@ public class BoardController {
         return "whiteboard";
     }
 
+    // this is a good name that explains what is does
     @GetMapping("/delete")
     public RedirectView deleteWhiteBoardFromUserProfile(long id) {
 

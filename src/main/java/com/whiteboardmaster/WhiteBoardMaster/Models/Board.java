@@ -112,6 +112,8 @@ public class Board {
     /*
                                 GETTERS
     */
+    // All of these getters needs test
+    // otherwise they are not being used
     public long getId() {
         return id;
     }
@@ -162,6 +164,8 @@ public class Board {
 
     public String getTitle() { return title; }
 
+    // Descriptions will be helpful
+    // reviewers can tell what the functions does but descriptions will be helpful
     public String toMarkDown(HttpServletResponse response) throws IOException {
         StringBuilder md_String = new StringBuilder()
                 .append(new Heading("Summary", 1)).append("\n")
